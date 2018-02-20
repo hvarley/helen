@@ -14,17 +14,7 @@
 
 get_header(); ?>
 
-
-
 	<div id="primary" class="content-area">
-
-		<div class="title-bar" style="background-image: url('<?php bloginfo('template_directory'); ?>/dist/images/about-me-header.jpg')">
-			<div class="container">
-				<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-			</div>
-		</div>
-
-		<div class="container main_content">
 		<main id="main" class="site-main">
 
 			<?php
@@ -41,14 +31,8 @@ get_header(); ?>
 			?>
 
 		</main><!-- #main -->
-
-		<?php
-		get_sidebar();
-		?>
-
-	</div>
 	</div><!-- #primary -->
 
 <?php
-
+get_sidebar();
 get_footer();

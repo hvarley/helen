@@ -1,0 +1,28 @@
+
+.logo {
+    display: block;
+    height: 50px;
+    width: 100%;
+    min-width: 300px;
+    background: url('../images/logo-white.svg');
+    background-repeat: no-repeat;
+    background-size: auto 50px;
+
+    @media (min-width:40rem) {
+      height: 85px;
+      background-size: auto 85px;
+    }
+
+}
+
+.logo-red,
+.logo-red2 {
+    display: block;
+    height: 50px;
+    width: 100%;
+    min-width: 300px;
+    background: url('../images/logo-red.svg');
+    background-repeat: no-repeat;
+    background-size: auto 50px;
+
+}

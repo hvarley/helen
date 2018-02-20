@@ -18,14 +18,25 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 
-		<div class="title-bar" style="background-image: url('<?php bloginfo('template_directory'); ?>/dist/images/about-me-header.jpg')">
+		<?php
+
+		$image = get_field('header_image');
+
+		if( !empty($image) ): ?>
+
+		<div class="title-bar" style="background-image: url('<?php echo $image['url']; ?>')">
+
+		<?php endif; ?>
+
 			<div class="container">
-				<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+				<div class="entry-title">Case Studies</div>
 			</div>
 		</div>
 
 		<div class="container main_content">
 		<main id="main" class="site-main">
+
+			<?php the_title( '<h1>', '</h1>' ); ?>
 
 			<?php
 			while ( have_posts() ) : the_post();
@@ -42,10 +53,10 @@ get_header(); ?>
 
 		</main><!-- #main -->
 
-		<?php
-		get_sidebar();
-		?>
-
+			<?php
+			get_sidebar();
+			?>
+			
 	</div>
 	</div><!-- #primary -->
 

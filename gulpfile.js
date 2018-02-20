@@ -8,7 +8,7 @@ var autoprefixer = require('gulp-autoprefixer');
 var notify = require('gulp-notify');
 
 gulp.task('workflow', function () {
-	gulp.src('./src/sass/**/*.scss')
+	gulp.src('src/sass/main.scss')
 		.pipe(sourcemaps.init())
 		.pipe(sass().on('error', sass.logError))
 		.pipe(autoprefixer({
@@ -18,10 +18,10 @@ gulp.task('workflow', function () {
 		.pipe(cssnano())
 		.pipe(sourcemaps.write('./'))
 
-	.pipe(gulp.dest('./dist/css/'))
+	.pipe(gulp.dest('dist/css/'))
 	.pipe(notify("SCSS Compiled Successfully :)"));
 });
 
 gulp.task('default', function () {
-	gulp.watch('./src/sass/**/*.scss', ['workflow']);
+	gulp.watch('src/sass/**/*.scss', ['workflow']);
 });

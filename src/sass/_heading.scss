@@ -1,0 +1,48 @@
+.entry-title {
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+  font-weight: 400;
+  padding-top: 2em;
+  font-size: 2rem;
+  text-transform: lowercase;
+
+  .page-id-58 &{
+    padding-top: 0.8em;
+  }
+}
+
+@media (min-width: 600px) {
+  .entry-title {
+
+    font-size: 3rem;
+
+    .page-id-58 &{
+      padding-top: 0.5em;
+    }
+  }
+
+}
+
+.title-bar {
+    height: 150px;
+    background-size: cover;
+    background-position-y: 50%;
+    background-position-x: 50%;
+}
+
+@media (min-width: 600px) {
+  .title-bar {
+  height: 250px;
+}
+}
+
+main {
+  h1 {
+    color: $red;
+    font-weight: 400;
+    font-size: 1.8rem;
+    border-left: 1px solid red;
+    padding-left: 0.8rem;
+    padding-top: 0;
+}
+}

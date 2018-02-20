@@ -1,3 +1,4 @@
+
 <?php
 /**
  * The sidebar containing the main widget area
@@ -7,11 +8,14 @@
  * @package helen
  */
 
-if ( ! is_active_sidebar( 'sidebar-1' ) ) {
-	return;
-}
+//if ( ! is_active_sidebar( 'sidebar-1' ) ) {
+//	return;
+//}
 ?>
 
 <aside id="secondary" class="widget-area">
+
+	<?php the_field('rhs_column'); ?>
+
 	<?php dynamic_sidebar( 'sidebar-1' ); ?>
 </aside><!-- #secondary -->
