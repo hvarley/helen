@@ -32,6 +32,7 @@ article {
 
 main {
   width: 100%;
+  margin: 1em 0;
 }
 
 @media (min-width: 600px) {
@@ -46,6 +47,7 @@ aside {
   width: 100%;
   border-left: 1px dashed $grey;
   padding-left: 1em;
+  margin: 1em 0;
 }
 
 @media (min-width: 600px) {
