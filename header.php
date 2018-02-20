@@ -37,7 +37,6 @@
 	        <nav id="site-navigation" class="top-navigation" role="navigation">
 	            <?php wp_nav_menu( array( 'theme_location' => 'main_menu' ) ); ?>
 	        </nav><!-- #site-navigation -->
-
 				</div>
 			</div>
 

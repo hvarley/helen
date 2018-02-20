@@ -21,3 +21,16 @@ main {
     font-weight: 700;
 }
 }
+
+footer{
+  a:link,
+  a:visited{
+    color: white;
+    transition: color 0.3s ease-in-out;
+    font-size: 1.5rem;
+  }
+  a:hover {
+    color: $red;
+    background-color: transparent;
+  }
+}
