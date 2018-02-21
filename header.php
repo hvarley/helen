@@ -25,7 +25,8 @@
 		<div class="container">
 
 			<div class="nav-wrapper">
-	      <div class="nav-header-logo-wrapper"><div id="logo-top" class=" <?php if ( is_front_page() ) : ?>logo<?php endif; ?> <?php if ( !is_front_page() ) : ?>logo-red2<?php endif; ?>"></div></div>
+	      <div class="nav-header-logo-wrapper"><a href="
+<?php echo esc_url( home_url( '/' ) ); ?>"><div id="logo-top" class=" <?php if ( is_front_page() ) : ?>logo<?php endif; ?> <?php if ( !is_front_page() ) : ?>logo-red2<?php endif; ?>"></div></a></div>
 	        <div class="nav-toggle-wrapper">
 	          <div for="nav-toggle" class="nav-icon nav-toggle">
 	              <span></span>
