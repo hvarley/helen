@@ -49,6 +49,7 @@
   z-index: 100;
   padding-top: 1em;
 
+
   @media (min-width:40rem) {
   //  padding-top: 2em;
   }
@@ -59,6 +60,7 @@
   background-color: white;
   transition: background-color .3s ease-in-out;
   padding-bottom: 1em;
+  box-shadow: 0 0 5px #f2f2f2;
 }
 
 .wrapper {

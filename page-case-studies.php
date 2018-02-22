@@ -18,7 +18,7 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 
-		<div class="title-bar" style="background-image: url('<?php bloginfo('template_directory'); ?>/dist/images/case-studies-header-grey.jpg')">
+		<div class="title-bar" style="background-image: url('<?php bloginfo('template_directory'); ?>/dist/images/umbrella.jpg')">
 
 			<div class="container">
 				<div class="entry-title"><h1 class="entry-title">Case Studies</h1></div>
