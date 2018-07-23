@@ -84,6 +84,14 @@ header {
   }
 }
 
+#primary {
+  .box {
+    li {
+      color: white;
+    }
+  }
+}
+
 .overlay {
   position: absolute;
   top:0;

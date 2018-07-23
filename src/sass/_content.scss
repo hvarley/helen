@@ -1,13 +1,20 @@
 #primary {
   margin-top: 5em;
 
-  p {
+  p,li {
     color: #2c3442;
     font-family: verdana;
     font-weight: 400;
     font-size: 0.9rem;
 
   }
+ .entry-content {
+  ul {
+    margin: 0;
+    padding: 0 1em;
+    list-style-type: disc;
+}
+}
 
 }
 
@@ -58,18 +65,25 @@ aside {
 
 .main_content{
 
-a:link,
-a:visited {
-  color: $red;
-  text-decoration: none;
-  line-height: 1rem;
-  font-weight: 400;
-  padding: 2px 6px;
-  transition: .5s ease-in;
-}
-a:hover {
-  background: $red;
-  color: white;
-}
+  a:link,
+  a:visited {
+    color: $red;
+    text-decoration: none;
+    line-height: 1rem;
+    font-weight: 400;
+    padding: 2px 6px;
+    transition: .5s ease-in;
+  }
+  a:hover {
+    background: $red;
+    color: white;
+  }
+
+  h2 {
+    a:link,
+    a:visited {
+      padding: 8px 6px;
+    }
+  }
 
 }

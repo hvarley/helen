@@ -1,41 +1,54 @@
-<!doctype html>
-<html lang="en">
+<?php
+/**
+ * The template for displaying posts
+ *
+ * This is the template that displays all pages by default.
+ * Please note that this is the WordPress construct of pages
+ * and that other 'pages' on your WordPress site may use a
+ * different template.
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ *
+ * @package helen
+ */
 
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+get_header(); ?>
 
-  <title></title>
 
-  <link rel="stylesheet" href="dist/css/main.css">
-</head>
 
-<body>
-<header>
-  <div class="container">
-    <div class="wrapper aligned">
-      <div class="box item1"><div class="logo"></div></div>
-      <div class="box item2">Two</div>
-      <div class="box item3">Three</div>
-    </div>
-  </div>
-</header>
+	<div id="primary" class="content-area">
 
-<div class="logo-bar">
-logos
-</div>
+		<div class="title-bar" style="background-image: url('<?php bloginfo('template_directory'); ?>/dist/images/about-me-header.jpg')">
+			<div class="container">
+        <h1 class="entry-title">Blog</h1>
+			</div>
+		</div>
 
-<div class="wrapper2">
-  <div class="box one">One</div>
-  <div class="box two">Two</div>
-  <div class="box three">Three</div>
-  <div class="box four">Four</div>
-  <div class="box five">Five</div>
-  <div class="box six">Six</div>
-</div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-  <script src="scripts.js"></script>
-</body>
+		<div class="container main_content">
+		<main id="main" class="site-main">
 
-</html>
+			<?php
+			while ( have_posts() ) : the_post();
+
+				get_template_part( 'template-parts/content', '' );
+
+				// If comments are open or we have at least one comment, load up the comment template.
+				if ( comments_open() || get_comments_number() ) :
+					comments_template();
+				endif;
+
+			endwhile; // End of the loop.
+			?>
+
+		</main><!-- #main -->
+
+		<?php
+		get_sidebar();
+		?>
+
+	</div>
+	</div><!-- #primary -->
+
+<?php
+
+get_footer();

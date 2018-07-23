@@ -7,17 +7,35 @@
  * @package helen
  */
 
-get_header(); ?>
+ get_header(); ?>
 
-	<div id="primary" class="content-area">
+
+
+ 	<div id="primary" class="content-area">
+
+ 		<?php
+
+ 		$image = get_field('blog_post_header_image');
+
+ 		if( !empty($image) ): ?>
+
+ 		<div class="title-bar" style="background-image: url('<?php echo $image['url']; ?>')">
+
+ 		<?php endif; ?>
+
+ 			<div class="container">
+ 				<div class="entry-title">Blog</div>
+ 			</div>
+ 		</div>
+
+ 		<div class="container main_content">
+
 		<main id="main" class="site-main">
 
 		<?php
 		while ( have_posts() ) : the_post();
 
 			get_template_part( 'template-parts/content', get_post_type() );
-
-			the_post_navigation();
 
 			// If comments are open or we have at least one comment, load up the comment template.
 			if ( comments_open() || get_comments_number() ) :
@@ -28,8 +46,13 @@ get_header(); ?>
 		?>
 
 		</main><!-- #main -->
-	</div><!-- #primary -->
+		<?php
+		get_sidebar();
+		?>
+
+</div>
+</div><!-- #primary -->
 
 <?php
-get_sidebar();
+
 get_footer();

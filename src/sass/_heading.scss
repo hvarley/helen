@@ -41,8 +41,18 @@ main {
     color: $red;
     font-weight: 400;
     font-size: 1.8rem;
-    border-left: 1px solid red;
+    border-left: 1px solid $red;
     padding-left: 0.8rem;
     padding-top: 0;
-}
-}
+  }
+  h2 {
+    border-left: 1px solid $red;
+  }
+  .entry-content {
+    h2 {
+      border-left: none;
+      color: $red;
+      font-weight: 500;
+    }
+  }
+  }

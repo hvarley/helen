@@ -188,3 +188,20 @@ function create_post_type() {
   );
 }
 add_action( 'init', 'create_post_type' );
+
+add_filter( 'widget_tag_cloud_args', 'change_tag_cloud_font_sizes');
+/**
+ * Change the Tag Cloud's Font Sizes.
+ *
+ * @since 1.0.0
+ *
+ * @param array $args
+ *
+ * @return array
+ */
+function change_tag_cloud_font_sizes( array $args ) {
+    $args['smallest'] = '12';
+    $args['largest'] = '20';
+
+    return $args;
+}
