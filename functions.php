@@ -129,7 +129,7 @@ function helen_scripts() {
 
 
 
-	wp_enqueue_style( 'wpb-google-fonts', 'http://fonts.googleapis.com/css?family=Raleway:200,400,700', false );
+	wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css?family=Raleway:200,400,700', false );
 
 	wp_register_script( 'fontawesome', 'https://use.fontawesome.com/9d77e7f046.js' );
 	wp_enqueue_script( 'fontawesome' );
